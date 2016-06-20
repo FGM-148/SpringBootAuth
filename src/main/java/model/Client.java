@@ -3,21 +3,22 @@ package model;
 import javax.persistence.*;
 
 @Entity
-public class User {
+public class Client {
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", updatable = false, nullable = false)
     private Long id;
 
-    @Column
+    @Column(name = "login")
     private String login;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

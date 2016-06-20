@@ -18,16 +18,15 @@ import org.springframework.web.bind.annotation.*;
         "repository"
 })
 
+@RestController
 public class MainController {
 
-//    @RequestMapping("/")
-//    @ResponseBody
-//    String home() {
-//        return "Hello World!";
-//    }
-
-
-
+    @RequestMapping("/")
+    @ResponseBody
+    String home() {
+        return "Hello World!";
+    }
+    
     public static void main(String[] args) throws Exception {
         SpringApplication.run(MainController.class, args);
     }
