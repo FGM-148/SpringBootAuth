@@ -3,23 +3,26 @@ package model;
 import javax.persistence.*;
 
 @Entity
-public class Client {
-
+@Table(name = "Accounts")
+public class Account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", updatable = false, nullable = false)
-    private Long id;
+    @Column(name = "account_id", updatable = false, nullable = false)
+    private Long account_id;
 
     @Column(name = "login")
     private String login;
 
+    @Column(name = "hashed_password")
+    private String hashed_password;
+
     public Long getId() {
-        return id;
+        return account_id;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        account_id = id;
     }
 
     public String getLogin() {
@@ -29,4 +32,5 @@ public class Client {
     public void setLogin(String login) {
         this.login = login;
     }
+
 }

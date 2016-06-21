@@ -1,5 +1,6 @@
-CREATE TABLE client
+CREATE TABLE accounts
 (
-  id SERIAL PRIMARY KEY,
-  login character varying(255) UNIQUE
+  account_id BIGSERIAL PRIMARY KEY,
+  login character varying(255) UNIQUE,
+  hashed_password CHARACTER VARYING(255)
 )

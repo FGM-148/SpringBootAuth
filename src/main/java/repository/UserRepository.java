@@ -5,14 +5,14 @@ import java.util.List;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 
-import model.Client;
+import model.Account;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 
 @RepositoryRestResource(collectionResourceRel = "user", path = "users")
-public interface UserRepository extends PagingAndSortingRepository<Client, Long> {
+public interface UserRepository extends PagingAndSortingRepository<Account, Long> {
 
-    List<Client> findByLogin(@Param("login") String login);
-    List<Client> findByLoginOrderByLogin(@Param("login") String login);
+    List<Account> findByLogin(@Param("login") String login);
+    List<Account> findByLoginOrderByLogin(@Param("login") String login);
 
 }

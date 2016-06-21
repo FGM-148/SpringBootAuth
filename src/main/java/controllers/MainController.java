@@ -26,7 +26,7 @@ public class MainController {
     String home() {
         return "Hello World!";
     }
-    
+
     public static void main(String[] args) throws Exception {
         SpringApplication.run(MainController.class, args);
     }

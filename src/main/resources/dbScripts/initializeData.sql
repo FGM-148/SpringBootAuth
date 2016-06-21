@@ -1,5 +1,5 @@
-DELETE FROM client;
+DELETE FROM accounts;
 
-INSERT INTO client(id,login)
+INSERT INTO accounts(account_id,login)
 VALUES ('1','adam'),
   ('2','marian');
