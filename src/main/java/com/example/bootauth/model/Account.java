@@ -1,4 +1,4 @@
-package model;
+package com.example.bootauth.model;
 
 import javax.persistence.*;
 

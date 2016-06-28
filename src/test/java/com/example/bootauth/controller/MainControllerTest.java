@@ -1,6 +1,4 @@
-package controllers;
-
-import static org.junit.Assert.*;
+package com.example.bootauth.controller;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
