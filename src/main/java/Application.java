@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {
-        "com.example.bootauth.controller"
+        "com.example.bootauth"
 })
 @EntityScan(basePackages = {
         "com.example.bootauth.model"

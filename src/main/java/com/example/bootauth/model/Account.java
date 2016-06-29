@@ -1,5 +1,7 @@
 package com.example.bootauth.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -14,8 +16,15 @@ public class Account {
     @Column(name = "login")
     private String login;
 
+    @JsonIgnore
     @Column(name = "hashed_password")
     private String hashed_password;
+
+    public Account(String login) {
+        this.login = login;
+    }
+
+    public Account(){}
 
     public Long getId() {
         return account_id;
@@ -31,6 +40,10 @@ public class Account {
 
     public void setLogin(String login) {
         this.login = login;
+    }
+
+    public void setHashed_password(String hashed_password) {
+        this.hashed_password = hashed_password;
     }
 
 }
