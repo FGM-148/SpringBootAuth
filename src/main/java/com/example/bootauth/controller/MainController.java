@@ -25,7 +25,7 @@ public class MainController {
     public ResponseEntity<Account> createAccount(@RequestBody Account account) {
 
         String password = "haslo";
-        accountService.createAccout(account, password);
+        accountService.createAccount(account, password);
 
         return new ResponseEntity<Account>(account, HttpStatus.CREATED);
     }

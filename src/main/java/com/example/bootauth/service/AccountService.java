@@ -15,7 +15,7 @@ public class AccountService {
     private AccountRepository accountRepository;
 
 
-    public Account createAccout(Account account, String password) {
+    public Account createAccount(Account account, String password) {
 
         String hashed_password = BCrypt.hashpw(password, BCrypt.gensalt());
         account.setHashed_password(hashed_password);
