@@ -14,11 +14,10 @@ public class AccountService {
     @Autowired
     private AccountRepository accountRepository;
 
-
     public Account createAccount(Account account, String password) {
 
         String hashed_password = BCrypt.hashpw(password, BCrypt.gensalt());
-        account.setHashed_password(hashed_password);
+        account.setHashedPassword(hashed_password);
         accountRepository.save(account);
 
         return account;

@@ -18,7 +18,7 @@ public class Account {
 
     @JsonIgnore
     @Column(name = "hashed_password")
-    private String hashed_password;
+    private String hashedPassword;
 
     public Account(String login) {
         this.login = login;
@@ -42,8 +42,8 @@ public class Account {
         this.login = login;
     }
 
-    public void setHashed_password(String hashed_password) {
-        this.hashed_password = hashed_password;
+    public void setHashedPassword(String hashedPassword) {
+        this.hashedPassword = hashedPassword;
     }
 
 }
