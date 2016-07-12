@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AccountRepository extends PagingAndSortingRepository<Account, Long> {
 
-    List<Account> findByLogin(@Param("login") String login);
+    Account findByLogin(@Param("login") String login);
     List<Account> findByLoginOrderByLogin(@Param("login") String login);
 
 }

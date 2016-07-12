@@ -10,11 +10,14 @@ public class Account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "account_id", updatable = false, nullable = false)
-    private Long account_id;
+    @Column(name = "accountId", updatable = false, nullable = false)
+    private Long accountId;
 
     @Column(name = "login")
     private String login;
+
+    @Column(name = "uuid")
+    private String uuid;
 
     @JsonIgnore
     @Column(name = "hashed_password")
@@ -27,15 +30,23 @@ public class Account {
     public Account(){}
 
     public Long getId() {
-        return account_id;
+        return accountId;
     }
 
     public void setId(Long id) {
-        account_id = id;
+        accountId = id;
     }
 
     public String getLogin() {
         return login;
+    }
+
+    public String getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
     }
 
     public void setLogin(String login) {
@@ -46,4 +57,7 @@ public class Account {
         this.hashedPassword = hashedPassword;
     }
 
+    public String getHashedPassword() {
+        return hashedPassword;
+    }
 }
